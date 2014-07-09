@@ -310,7 +310,7 @@ class Evolubat {
      */
     public static function install()
     {
-        Db::getInstance()->execute('ALTER TABLE `'._DB_PREFIX_.'product` ADD `evolubat_id` INT NOT NULL');
+        Db::getInstance()->execute('ALTER TABLE `'._DB_PREFIX_.'product` ADD `id_evolubat` INT NOT NULL');
 
         return true;
     }
