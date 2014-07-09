@@ -311,6 +311,7 @@ class Evolubat {
     public static function install()
     {
         Db::getInstance()->execute('ALTER TABLE `'._DB_PREFIX_.'product` ADD `id_evolubat` INT NOT NULL');
+        Db::getInstance()->execute('ALTER TABLE `'._DB_PREFIX_.'customer` ADD `id_evolubat` INT NOT NULL');
 
         return true;
     }
@@ -321,6 +322,7 @@ class Evolubat {
     public static function uninstall()
     {
         Db::getInstance()->Execute('ALTER TABLE `'._DB_PREFIX_.'product DROP `id_evolubat`');
+        Db::getInstance()->Execute('ALTER TABLE `'._DB_PREFIX_.'customer DROP `id_evolubat`');
         Configuration::deleteByName('EVOLUBAT_URL');
 
         return true;
