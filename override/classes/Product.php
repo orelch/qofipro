@@ -49,7 +49,7 @@ class Product extends ProductCore
      * @param boolean $use_reduc Set if the returned amount will include reduction
      * @param boolean $with_ecotax insert ecotax in price output.
      * @param variable_reference $specific_price_output
-     * 	If a specific price applies regarding the previous parameters, this variable is filled with the corresponding SpecificPrice object
+     *  If a specific price applies regarding the previous parameters, this variable is filled with the corresponding SpecificPrice object
      * @return float Product price
      **/
 
