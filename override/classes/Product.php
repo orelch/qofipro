@@ -21,6 +21,17 @@
 class Product extends ProductCore
 {
 
+    /** @var int Internal Evolubat Id */
+    public $id_evolubat;
+
+    public function __construct($id_product = null, $full = false, $id_lang = null, $id_shop = null, Context $context = null)
+    {
+        Cache::clean('*');
+        Product::$definition['fields']['id_evolubat'] = array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId');
+
+        parent::__construct($id_product, $full, $id_lang, $id_shop, $context);
+    }
+
     /**
      * Price calculation / Get product price
      *
