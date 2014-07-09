@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+	var url = "http://Froy:8980/Evo2Rest/rest/Evo2Rest/Stock?piIdU=1&piIdAD=1375";
+    $.get(url,function(data,status){
+      alert("Status: " + status);
+	  $("div").append(data);
+	  alert("fin");
+    },"text");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Get Stock!</button>
+
+<div></div>
+
+</body>
+</html>
